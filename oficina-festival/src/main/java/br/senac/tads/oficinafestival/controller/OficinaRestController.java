@@ -36,8 +36,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class OficinaRestController {
   
   @GetMapping("/rest")
-  public Postagem obterPostagem(@RequestParam("nome") String nome) {
-    return new Postagem("Nome", "Mensagem de teste enviada por " + nome);
+  public Postagem obterPostagem(@RequestParam(value = "nome", defaultValue = "Fulano") String nome) {
+    return new Postagem(nome, "Campo preenchido por " + nome);
   }
   
 }

@@ -5,9 +5,29 @@
     <meta charset="UTF-8">
     <!-- Evita q conteúdo seja redimensionado em mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../resources/css/estilos.css" />
+    <!--
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="../resources/js/funcoes.js"></script>
+   <script src="../resources/js/funcoes-ajax.js"></script>
+    -->
   </head>
   <body>
     <h1>Bem vindo à Oficina de Desenvolvimento Web</h1>
     <h2>Festival Vida Universitária Senac</h2>
+    <!-- ALTERAR DESTA LINHA PARA BAIXO -->
+
+
+
+
+    <div>
+      <form action="#">
+	<label for="txtnome">Nome:</label>
+	<input type="text" id="txtnome" placeholder="Prencha seu nome"/>
+	<button type="submit" id="btnenviar">Enviar</button>
+      </form>
+      <div id="resposta-ajax"></div>
+    </div>
+
   </body>
 </html>
