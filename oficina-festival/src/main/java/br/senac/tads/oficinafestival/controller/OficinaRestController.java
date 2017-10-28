@@ -23,21 +23,21 @@
  */
 package br.senac.tads.oficinafestival.controller;
 
-import org.springframework.stereotype.Controller;
+import br.senac.tads.oficinafestival.model.Postagem;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
- * Controle principal que simplesmente encaminha para o nome do template sem extensão HTML.
  *
- * @author fernando.tsuda
+ * @author Fernando
  */
-@Controller
-public class MainController {
-
-  @GetMapping("/oficina/{template}")
-  public String abrirPagina(@PathVariable("template") String templateName) {
-    return templateName;
+@RestController
+public class OficinaRestController {
+  
+  @GetMapping("/rest")
+  public Postagem obterPostagem(@RequestParam("nome") String nome) {
+    return new Postagem("Nome", "Mensagem de teste enviada por " + nome);
   }
-
+  
 }

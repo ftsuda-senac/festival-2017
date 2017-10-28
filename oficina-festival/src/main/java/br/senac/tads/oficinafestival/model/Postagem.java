@@ -21,23 +21,40 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package br.senac.tads.oficinafestival.controller;
-
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+package br.senac.tads.oficinafestival.model;
 
 /**
- * Controle principal que simplesmente encaminha para o nome do template sem extensão HTML.
  *
- * @author fernando.tsuda
+ * @author Fernando
  */
-@Controller
-public class MainController {
+public class Postagem {
 
-  @GetMapping("/oficina/{template}")
-  public String abrirPagina(@PathVariable("template") String templateName) {
-    return templateName;
+  private String titulo;
+
+  private String descricao;
+
+  public Postagem() {
+  }
+
+  public Postagem(String titulo, String descricao) {
+    this.titulo = titulo;
+    this.descricao = descricao;
+  }
+
+  public String getTitulo() {
+    return titulo;
+  }
+
+  public void setTitulo(String titulo) {
+    this.titulo = titulo;
+  }
+
+  public String getDescricao() {
+    return descricao;
+  }
+
+  public void setDescricao(String descricao) {
+    this.descricao = descricao;
   }
 
 }
